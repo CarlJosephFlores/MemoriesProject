@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <button onclick="showUpload()">UPLOAD MEMORY</button>
+        <button onclick="showYears()">VIEW MEMORIES</button>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Years -->
+        <div id="yearsView">
+            <h1>VIEW MEMORIES</h1>
+            <div class="year-grid">
+                <button onclick="openYear(2022)">2022</button>
+                <button onclick="openYear(2023)">2023</button>
+                <button onclick="openYear(2024)">2024</button>
+                <button onclick="openYear(2025)">2025</button>
+                <button onclick="openYear(2026)">2026</button>
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div id="galleryView" class="hidden">
+            <h1 id="yearTitle"></h1>
+            <div id="gallery"></div>
+            <button onclick="showYears()">Back</button>
+        </div>
+
+        <!-- Upload -->
+        <div id="uploadView" class="hidden">
+            <h1>UPLOAD MEMORY</h1>
+
+            <input type="file" id="fileInput">
+            <input type="text" id="nameInput" placeholder="Name">
+            <input type="text" id="descInput" placeholder="Description">
+
+            <select id="yearInput">
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+            </select>
+
+            <button onclick="saveMemory()">SUBMIT</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
